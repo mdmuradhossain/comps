@@ -1,1 +1,25 @@
-<p>collections-home works!</p>
+<app-divider>Table Component</app-divider>
+<app-table
+  [data]="data"
+  [headers]="headers"
+  classNames="striped celled"
+></app-table>
+<app-divider>Tab Menu</app-divider>
+<div class="ui grid">
+  <div class="four wide column">
+    <div class="ui vertical fluid tabular menu">
+      <a routerLink="/collections" routerLinkActive="active" class="item"
+        >Biograpy</a
+      >
+      <a routerLink="companies" routerLinkActive="active" class="item"
+        >Companies</a
+      >
+      <a routerLink="partners" routerLinkActive="active" class="item"
+        >Partners</a
+      >
+    </div>
+  </div>
+  <div class="twelve wide stretched column">
+    <router-outlet></router-outlet>
+  </div>
+</div>
