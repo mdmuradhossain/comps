@@ -5,6 +5,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
+    path: 'views',
+    loadChildren: () =>
+      import('./views/views.module').then((m) => m.ViewsModule),
+  },
+  {
     path: 'collections',
     loadChildren: () =>
       import('./collections/collections.module').then(
