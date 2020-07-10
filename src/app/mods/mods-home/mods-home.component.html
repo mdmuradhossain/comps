@@ -1,2 +1,5 @@
 <app-divider>Modal Component</app-divider>
-<app-modal></app-modal>
+<button (click)="onClick()" class="ui inverted primary button">
+  Show Modal
+</button>
+<app-modal *ngIf="modalOpen" (close)="onClick()"></app-modal>
