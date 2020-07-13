@@ -2,4 +2,15 @@
 <button (click)="onClick()" class="ui inverted primary button">
   Show Modal
 </button>
-<app-modal *ngIf="modalOpen" (close)="onClick()"></app-modal>
+<app-modal *ngIf="modalOpen" (close)="onClick()">
+  <div modalTitle>
+    I am a Reusable Title
+  </div>
+  <p>I am a Reusable modal window</p>
+  <ng-container modalFooter>
+    <button class="ui button" (click)="onClick()">Close Me</button>
+  </ng-container>
+</app-modal>
+
+<app-divider>Accordion Component</app-divider>
+<app-accordion [items]="items"></app-accordion>
